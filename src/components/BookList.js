@@ -11,3 +11,5 @@ const BookList = () => (
     <Book book={{ id: 0, title: 'harry potter', category: 'magic' }} />
   </table>
 );
+
+export default BookList;

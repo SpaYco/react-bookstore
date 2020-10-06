@@ -19,3 +19,5 @@ Book.defaultProps = {
   title: 'invalid',
   category: 'none',
 };
+
+export default Book;
