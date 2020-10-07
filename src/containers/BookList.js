@@ -35,8 +35,15 @@ const BookList = ({ books }) => {
 };
 
 BookList.propTypes = {
-  books: PropTypes.array,
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      category: PropTypes.string.isRequired,
+    }),
+  ),
 };
+
 BookList.defaultProps = {
   books: [],
 };

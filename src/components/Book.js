@@ -10,14 +10,9 @@ const Book = ({ id, title, category }) => (
 );
 
 Book.propTypes = {
-  id: PropTypes.number,
-  title: PropTypes.string,
-  category: PropTypes.string,
-};
-Book.defaultProps = {
-  id: 0,
-  title: 'invalid',
-  category: 'none',
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };
 
 export default Book;
