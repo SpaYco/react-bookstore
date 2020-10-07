@@ -3,7 +3,7 @@ import './App.css';
 import BooksForm from './components/BookForm';
 import BooksList from './components/BookList';
 
-const App = ({ books }) => (
+const App = () => (
   <div className="App">
     <BooksList />
     <BooksForm />
