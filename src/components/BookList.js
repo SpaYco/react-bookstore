@@ -4,28 +4,20 @@ import Book from './Book';
 
 const BookList = ({ books }) => (
   <table>
-    { console.log(books) }
-    <tr>
+    <thead>
       <th>ID</th>
       <th>Title</th>
       <th>Category</th>
-    </tr>
-    { books.map(item => (
-      <Book
-        key={item.id}
-        book={{
-          id: item.id,
-          title: item.title,
-          category: item.category,
-        }}
-      />
-    ))}
+    </thead>
+    <tbody>
+      {console.log({books})
+
+      }
+
+    </tbody>
+
   </table>
 );
 
-const mapStateToProps = state => {
-  const { books } = state;
-  return { books };
-};
-
+const mapStateToProps = state => ({ books: state.books });
 export default connect(mapStateToProps, null)(BookList);
