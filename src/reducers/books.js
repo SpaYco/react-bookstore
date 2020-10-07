@@ -1,18 +1,18 @@
 import { CREATE_BOOK, REMOVE_BOOK } from '../actions/index';
 
 const INITIAL_STATE = [{
-  id: 1,
-  title: 'Romeo and Juliet',
-  category: 'Action',
+  id: Math.floor(Math.random() * Math.floor(50)),
+  title: 'Harry Potter',
+  category: 'Sci-Fi',
 },
 {
-  id: 2,
-  title: 'How to cook your first tomato soup - Practical guide',
+  id: Math.floor(Math.random() * Math.floor(50)),
+  title: 'Learn React in 5 hours',
   category: 'Learning',
 },
 {
-  id: 3,
-  title: 'Everything you need to know about startups',
+  id: Math.floor(Math.random() * Math.floor(50)),
+  title: 'This Book Love You',
   category: 'Learning',
 },
 ];
