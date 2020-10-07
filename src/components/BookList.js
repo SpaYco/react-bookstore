@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Book from './Book';
 
 const BookList = ({ books }) => {
-  console.log(books);
   const getBooks = () => {
     const result = [];
     for (let i = 0; i < books.length; i += 1) {
