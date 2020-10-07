@@ -5,10 +5,18 @@ import PropTypes from 'prop-types';
 import Book from './Book';
 
 const BookList = ({ books }) => {
+  console.log(books);
   const getBooks = () => {
     const result = [];
     for (let i = 0; i < books.length; i += 1) {
-      result.push(<Book id={books[i].id} title={books[i].title} category={books[i].category} />);
+      result.push(
+        <Book
+          key={books[i].id}
+          id={books[i].id}
+          title={books[i].title}
+          category={books[i].category}
+        />,
+      );
     }
     return result;
   };
@@ -16,15 +24,13 @@ const BookList = ({ books }) => {
   return (
     <table>
       <thead>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Category</th>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Category</th>
+        </tr>
       </thead>
-      <tbody>
-        {getBooks()}
-
-      </tbody>
-
+      <tbody>{getBooks()}</tbody>
     </table>
   );
 };

@@ -5,7 +5,11 @@ const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learnin
 const getCategories = () => {
   const result = [];
   for (let i = 0; i < categories.length; i += 1) {
-    result.push(<option value={categories[i]}>{categories[i]}</option>);
+    result.push(
+      <option key={categories[i]} value={categories[i]}>
+        {categories[i]}
+      </option>,
+    );
   }
   return result;
 };
