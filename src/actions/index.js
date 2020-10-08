@@ -1,9 +1,12 @@
-export const CREATE_BOOK = book => ({
-  type: 'CREATE_BOOK',
+export const CREATE_BOOK = 'CREATE_BOOK';
+export const REMOVE_BOOK = 'REMOVE_BOOK';
+
+export const createBook = book => ({
+  type: CREATE_BOOK,
   payload: book,
 });
 
-export const REMOVE_BOOK = book => ({
-  type: 'REMOVE_BOOK',
+export const removeBook = book => ({
+  type: REMOVE_BOOK,
   payload: book,
 });
