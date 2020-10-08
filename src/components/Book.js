@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { removeBook } from '../actions/index';
 
 class Book extends React.Component {
   constructor(props) {
@@ -34,10 +32,4 @@ Book.propTypes = {
   removeOldBook: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = dispatch => ({
-  removeOldBook: state => {
-    dispatch(removeBook(state));
-  },
-});
-
-export default connect(null, mapDispatchToProps)(Book);
+export default Book;

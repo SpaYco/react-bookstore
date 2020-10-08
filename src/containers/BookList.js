@@ -3,8 +3,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import { removeBook } from '../actions/index';
 
-const BookList = ({ books }) => {
+const BookList = ({ books, handleBookRemove }) => {
   const getBooks = () => {
     const result = [];
     for (let i = 0; i < books.length; i += 1) {
@@ -14,6 +15,7 @@ const BookList = ({ books }) => {
           id={books[i].id}
           title={books[i].title}
           category={books[i].category}
+          removeOldBook={handleBookRemove}
         />,
       );
     }
@@ -43,6 +45,7 @@ BookList.propTypes = {
       category: PropTypes.string.isRequired,
     }),
   ),
+  handleBookRemove: PropTypes.func.isRequired,
 };
 
 BookList.defaultProps = {
@@ -51,4 +54,10 @@ BookList.defaultProps = {
 
 const mapStateToProps = state => ({ books: state.books });
 
-export default connect(mapStateToProps, null)(BookList);
+const mapDispatchToProps = dispatch => ({
+  handleBookRemove: state => {
+    dispatch(removeBook(state));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);
