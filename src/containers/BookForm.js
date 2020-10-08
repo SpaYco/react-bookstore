@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { createBook, removeBook } from '../actions/index';
+import { createBook } from '../actions/index';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -97,12 +97,10 @@ BookForm.defaultProps = {
   books: [],
 };
 
-const mapStateToProps = state => ({ books: state.books });
-
 const mapDispatchToProps = dispatch => ({
   createNewBook: state => {
     dispatch(createBook(state));
   },
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookForm);
+export default connect(null, mapDispatchToProps)(BookForm);

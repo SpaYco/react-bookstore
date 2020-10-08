@@ -10,7 +10,7 @@ const BookList = ({ books }) => {
     for (let i = 0; i < books.length; i += 1) {
       result.push(
         <Book
-          key={books[i].id}
+          key={i}
           id={books[i].id}
           title={books[i].title}
           category={books[i].category}
@@ -27,6 +27,7 @@ const BookList = ({ books }) => {
           <th>ID</th>
           <th>Title</th>
           <th>Category</th>
+          <th>Remove Book</th>
         </tr>
       </thead>
       <tbody>{getBooks()}</tbody>
@@ -49,4 +50,5 @@ BookList.defaultProps = {
 };
 
 const mapStateToProps = state => ({ books: state.books });
+
 export default connect(mapStateToProps, null)(BookList);
