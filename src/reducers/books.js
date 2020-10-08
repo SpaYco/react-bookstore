@@ -22,10 +22,7 @@ const booksReducer = (state = INITIAL_STATE, action) => {
     case CREATE_BOOK:
       return [...state, action.payload];
     case REMOVE_BOOK:
-      return [
-        ...state.slice(0, action.payload),
-        ...state.slice(action.payload + 1, state.length),
-      ];
+      return [...state].filter(item => item.id !== action.payload);
     default:
       return state;
   }
