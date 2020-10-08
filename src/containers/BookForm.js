@@ -35,7 +35,10 @@ class BookForm extends React.Component {
     if (event.target.name === 'title') {
       this.setState({ title: event.target.value });
     } else if (event.target.name === 'categories') {
-      this.setState({ id: Math.floor(Math.random() * Math.floor(50)), category: event.target.value });
+      this.setState({
+        id: Math.floor(Math.random() * Math.floor(50)),
+        category: event.target.value,
+      });
     }
   }
 
@@ -84,17 +87,7 @@ class BookForm extends React.Component {
 }
 
 BookForm.propTypes = {
-  books: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      category: PropTypes.string.isRequired,
-    }),
-  ),
-};
-
-BookForm.defaultProps = {
-  books: [],
+  createNewBook: PropTypes.func.isRequired,
 };
 
 const mapDispatchToProps = dispatch => ({
