@@ -6,7 +6,9 @@ import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions/index';
 import CategoryFilter from '../components/CategoryFilter';
 
-const BookList = ({ books, handleBookRemove, filter, handleFilterChange }) => {
+const BookList = ({
+  books, handleBookRemove, filter, handleFilterChange,
+}) => {
   const getBooks = () => {
     const result = [];
     for (let i = 0; i < books.length; i += 1) {
@@ -53,6 +55,7 @@ BookList.propTypes = {
   ),
   handleBookRemove: PropTypes.func.isRequired,
   handleFilterChange: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired,
 };
 
 BookList.defaultProps = {
