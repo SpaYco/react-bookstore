@@ -28,19 +28,10 @@ const BookList = ({
   };
 
   return (
-    <div>
+    <div className="list-container v-flex">
       <CategoryFilter changeFilter={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Remove Book</th>
-          </tr>
-        </thead>
-        <tbody>{getBooks()}</tbody>
-      </table>
+      {getBooks()}
+      <hr />
     </div>
   );
 };

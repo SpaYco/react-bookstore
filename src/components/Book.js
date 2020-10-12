@@ -15,12 +15,40 @@ class Book extends React.Component {
   render() {
     const { id, title, category } = this.props;
     return (
-      <tr>
-        <td>{id}</td>
-        <td>{title}</td>
-        <td>{category}</td>
-        <td><input type="submit" value="X" onClick={this.bookRemover} /></td>
-      </tr>
+      <div className="book-container flex">
+        <div className="title-container ">
+          <div className="category">{category}</div>
+          <div className="title">{title}</div>
+          <div className="author">Author</div>
+          <div className="btns flex">
+            <p>Comments</p>
+            <button type="button" onClick={this.bookRemover}>
+              Remove
+            </button>
+            <p>Edit</p>
+          </div>
+        </div>
+
+        <div className="right-container flex">
+          <div className="progress-panel flex">
+            <div className="progress" />
+            <div className="progress-details v-flex">
+              <h2>
+                {id}
+                %
+              </h2>
+              <p>Completed</p>
+            </div>
+          </div>
+
+          <div className="chapter-container ">
+            <div className="chapter">CURRENT CHAPTER</div>
+            <div className="chapter-title">CHAPTER 3: &quot;A Lesson Learned&quot;</div>
+            <button type="submit" className="progress-btn">UPDATE PROGRESS</button>
+          </div>
+        </div>
+
+      </div>
     );
   }
 }

@@ -29,7 +29,7 @@ class CategoryFilter extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="cat-list">
         <select onChange={this.bookFilter} name="categories" id="categories" defaultValue="All">
           {getCategories()}
         </select>
