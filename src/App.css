@@ -9,6 +9,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  padding-bottom: 10vh;
+}
+
 .v-flex,
 .flex {
   display: flex;
