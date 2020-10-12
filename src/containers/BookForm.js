@@ -77,10 +77,12 @@ class BookForm extends React.Component {
             onChange={this.handleChange}
             name="categories"
             id="categories"
-            defaultValue="default">
+            defaultValue="default"
+          >
             <option disabled value="default">
               {' '}
-              -- select an option --{' '}
+              -- select an option --
+              {' '}
             </option>
             {getCategories()}
           </select>
