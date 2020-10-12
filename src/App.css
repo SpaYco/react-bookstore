@@ -51,8 +51,8 @@
     border: solid 1px #e8e8e8;
     color: #0290ff;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     padding: 10px;
     text-align: center;
   }
@@ -61,6 +61,14 @@
     justify-content: space-between;
     padding: 40px;
     background-color: white;
+  }
+
+  .cat-list select {
+    margin-top: 25px;
+    width: 70vw;
+    height: 50px;
+    border-width: 1px;
+    font-size: 25px;
   }
 
   .list-container {

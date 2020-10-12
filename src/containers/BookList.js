@@ -29,7 +29,7 @@ const BookList = ({
 
   return (
     <div className="list-container v-flex">
-      {/* <CategoryFilter changeFilter={handleFilterChange} /> */}
+      <CategoryFilter changeFilter={handleFilterChange} />
       {getBooks()}
       <hr />
     </div>
