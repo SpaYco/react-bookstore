@@ -60,28 +60,38 @@ class BookForm extends React.Component {
   render() {
     const { title } = this.state;
     return (
-      <form id="form">
-        <label htmlFor="title">
-          title
+      <div className="form-container v-flex">
+        <div className="form-heading">ADD NEW BOOK</div>
+        <div id="warning" />
+        <form id="form" className="form flex">
           <input
+            className="title-field"
             onChange={this.handleChange}
             id="title"
             name="title"
             type="text"
             value={title}
           />
-        </label>
-        <select onChange={this.handleChange} name="categories" id="categories" defaultValue="default">
-          <option disabled value="default">
-            {' '}
-            -- select an option --
-            {' '}
-          </option>
-          {getCategories()}
-        </select>
-        <input onClick={this.handleSubmit} type="submit" />
-        <div id="warning" />
-      </form>
+          <select
+            className="category-field"
+            onChange={this.handleChange}
+            name="categories"
+            id="categories"
+            defaultValue="default">
+            <option disabled value="default">
+              {' '}
+              -- select an option --{' '}
+            </option>
+            {getCategories()}
+          </select>
+          <input
+            className="add-btn"
+            onClick={this.handleSubmit}
+            type="submit"
+            value="ADD BOOK"
+          />
+        </form>
+      </div>
     );
   }
 }

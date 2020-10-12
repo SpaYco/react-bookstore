@@ -31,6 +31,7 @@ const BookList = ({
     <div className="list-container v-flex">
       {/* <CategoryFilter changeFilter={handleFilterChange} /> */}
       {getBooks()}
+      <hr />
     </div>
   );
 };
