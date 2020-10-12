@@ -22,21 +22,27 @@ class Book extends React.Component {
           <div className="author">Author</div>
           <div className="btns flex">
             <p>Comments</p>
-            <button type="button" onClick={this.bookRemover}>Remove</button>
+            <button type="button" onClick={this.bookRemover}>
+              Remove
+            </button>
             <p>Edit</p>
           </div>
         </div>
+
         <div className="right-container flex">
           <div className="progress-panel flex">
             <div className="progress" />
             <div className="progress-details v-flex">
-              <h2>
-                {id}
-                %
-              </h2>
+              <h2>{id}%</h2>
               <p>Completed</p>
             </div>
           </div>
+        </div>
+
+        <div className="chapter-container ">
+          <div className="chapter">CURRENT CHAPTER</div>
+          <div className="chapter-title">CHAPTER 3: "A Lesson Learned"</div>
+          <button type="submit" className="progress-btn">UPDATE PROGRESS</button>
         </div>
       </div>
     );
