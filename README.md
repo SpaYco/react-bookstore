@@ -3,7 +3,8 @@ A front-end React application for organizing and managing a bookstore.
 This project was set up with [Create React App](https://github.com/facebook/create-react-app).
 
 # Screenshot
-Not Available Yet.
+
+![screenshot](./screenshot.png)
 
 ## Built With
 - React.
